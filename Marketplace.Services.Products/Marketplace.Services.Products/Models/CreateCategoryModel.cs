@@ -1,6 +1,9 @@
-﻿namespace Marketplace.Services.Products.Models
+﻿using Marketplace.Services.Products.Entities;
+
+namespace Marketplace.Services.Products.Models;
+
+public class CreateCategoryModel
 {
-    public class CreateCategoryModel
-    {
-    }
+    public required string Name { get; set; }
+    public int? ParentId { get; set; }
 }
