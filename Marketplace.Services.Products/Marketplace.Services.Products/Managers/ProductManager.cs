@@ -64,7 +64,7 @@ public class ProductManager
         product.CategoryId = categoryId;
         product.Images = (List<ProductImage>?)model.Images.Select(i => new ProductImage()
         {
-            ProductId = i.ProductId,
+            ProductId = i.ProductId.ToString(),
             Path = FileService.ProductImages(i.Image)
         });
         await _repository.UpdateProduct(category, product);
